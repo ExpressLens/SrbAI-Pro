@@ -237,4 +237,37 @@ def make_maps(
     Returns ngram, context, ngram_vector, word_vector and word maps
     """
     ngram_map = make_ngram_map(word_list, model_config.ngram_size)
-    cont
+    context_map = make_context_map(
+        word_list,
+        left_context_window=model_config.context_window["left"],
+        right_context_window=model_config.context_window["right"],
+        self_context=model_config.self_context,
+    )
+    ngram_vectors = make_ngram_vector_map(ngram_map)
+    word_vectors = make_word_vector_map(word_list)
+    word_map = make_word_map(
+        word_list, ngram_map, context_map, ngram_vectors, word_vectors
+    )
+
+    return ngram_map, context_map, ngram_vectors, word_vectors, word_map
+
+
+def preprocess_corpus(
+    language_config: LanguageConfig, model_config: ModelConfig
+) -> Tuple[
+    Dict[str, List[str]],
+    Dict[str, List[str]],
+    Dict[str, int],
+    Dict[str, int],
+    Dict[str, Dict[str, List[int]]],
+]:
+    """
+    Given the path to the corpus, create dataset that will later be used in the NN
+    """
+    text = open_corpus(language_config.corpus_path)
+    cleaned = clean_text(text)
+    word_list = make_word_list(cleaned)
+    word_list = remove_stopwords(word_list, language_config.stopwords_path)
+    maps = make_maps(word_list, model_config)
+
+    return maps
