@@ -1,0 +1,27 @@
+This product is made available subject to the terms of GNU Lesser General Public License Version 3. A copy of the LGPL license can be found at http://www.openoffice.org/license.html
+
+------------------------------------
+Third Party Code. Additional copyright notices and license terms applicable to portions of the Software are set forth in the THIRDPARTYLICENSEREADME.html file.
+
+------------------------------------
+All trademarks and registered trademarks mentioned herein are the property of their respective owners.  
+
+------------------------------------
+Copyright 2002,2008 Sun Microsystems, Inc.
+
+This product has been created with contributions from the OpenOffice.org community, of which Sun Microsystems Inc. is the founding member. OpenOffice.org acknowledges all community members, especially those mentioned at http://www.openoffice.org/welcome/credits.html.
+
+------------------------------------
+
+
+		   GNU LESSER GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
+
+ Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+
+
+  This version of the GNU Lesser General Public License incorporates
+the terms and conditions of version 3 of the GNU General Public
+License, supplemented by 
